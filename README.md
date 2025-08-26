@@ -1,8 +1,3 @@
-Oke, aku buatkan contoh **README.md** yang rapi untuk project Flask lab kamu, lengkap dengan penjelasan, cara install, Docker, dan Docker Compose.
-
----
-
-```markdown
 # Damn Vulnerable LMS App
 
 Project ini adalah **lab e-learning berbasis Flask** yang sengaja dibuat rentan untuk **praktik keamanan web** seperti:  
