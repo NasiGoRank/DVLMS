@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<h2>Courses</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in courses %}
+        <tr>
+            <td>{{ c['id'] }}</td>
+            <td>{{ c['name'] }}</td>
+            <td>{{ c['description'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+{% endblock %}

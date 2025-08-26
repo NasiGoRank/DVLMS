@@ -1,0 +1,29 @@
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+.card.light-mode {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+.card.dark-mode {
+    background-color: #1c1c1c;
+    color: #f8f9fa;
+}
+
+.table.light-mode {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+.table.dark-mode {
+    background-color: #1c1c1c;
+    color: #f8f9fa;
+}

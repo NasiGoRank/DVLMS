@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<h2>Edit Profile</h2>
+<div class="card mb-3" style="max-width: 500px;">
+    <div class="card-body">
+        <form method="POST">
+            <input type="hidden" name="id" value="{{ user['id'] }}">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" value="{{ user['username'] }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="text" class="form-control" name="password" value="{{ user['password'] }}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Role</label>
+                <input type="text" class="form-control" name="role" value="{{ user['role'] }}">
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+            <a href="/profile?id={{ user['id'] }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

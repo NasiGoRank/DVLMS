@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ username }} ({{ role }})</h2>
+
+<div class="list-group">
+    <a href="/courses" class="list-group-item list-group-item-action">View Courses</a>
+
+    {% if role == 'student' %}
+    <a href="/grades?student_id={{ user_id }}" class="list-group-item list-group-item-action">My Grades</a>
+    {% endif %}
+
+    {% if role == 'admin'%}
+    <a href="/admin" class="list-group-item list-group-item-action">Admin Panel</a>
+    {% endif %}
+
+    {% if role == 'teacher' or 'admin'%}
+    <a href="/teacher_panel" class="list-group-item list-group-item-action">Teacher Panel</a>
+    {% endif %}
+</div>
+{% endblock %}

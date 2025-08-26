@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Teacher Panel{% endblock %}
+
+{% block content %}
+<h2>Teacher Panel</h2>
+<h4>Student List</h4>
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for s in students %}
+        <tr>
+            <td>{{ s['id'] }}</td>
+            <td>{{ s['username'] }}</td>
+            <td>{{ s['role'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/dashboard" class="btn btn-secondary mt-2">Back to Dashboard</a>
+{% endblock %}

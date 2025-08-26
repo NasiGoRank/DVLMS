@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+<h2>My Profile</h2>
+<div class="card mb-3" style="max-width: auto;">
+    <div class="card-body">
+        <p><b>ID:</b> {{ user['id'] }}</p>
+        <p><b>Username:</b> {{ user['username'] }}</p>
+        <p><b>Password:</b> {{ user['password'] }}</p>
+        <p><b>Role:</b> {{ user['role'] }}</p>
+        <a href="/edit_profile?id={{ user['id'] }}" class="btn btn-primary">Edit Profile</a>
+    </div>
+</div>
+<a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+{% endblock %}
