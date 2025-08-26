@@ -1,22 +1,22 @@
 # Damn Vulnerable LMS App
 
-Project ini adalah **lab e-learning berbasis Flask** yang sengaja dibuat rentan untuk **praktik keamanan web** seperti:  
-- Broken Access Control (BAC)  
-- Insecure Direct Object Reference (IDOR)  
-- Privilege Escalation  
-- Lainnya  
+This project is a **Flask-based e-learning lab** that is intentionally made vulnerable for **web security practice**, such as:
 
-Dapat digunakan untuk latihan keamanan web dan pembelajaran Python/Flask.
+  - Broken Access Control (BAC)
+  - Insecure Direct Object Reference (IDOR)
+  - Privilege Escalation
+  - Others
 
----
+It can be used for web security training and learning Python/Flask.
 
-## 🗂 Struktur Project
+-----
+
+## 🗂 Project Structure
 
 ```
-
 Vuln Lab/
 │── app.py
-│── init\_db.py
+│── init_db.py
 │── requirements.txt
 │── Dockerfile
 │── docker-compose.yml
@@ -31,116 +31,113 @@ Vuln Lab/
 │       ├── static.css
 │       └── theme.css
 │── database.db
-
-````
-
----
-
-## ⚙️ Instalasi Lokal
-
-1. Clone repo:
-
-```bash
-git clone https://github.com/NasiGoRank/Damn-Vulnerable-LMS-App.git
-cd Damn-Vulnerable-LMS-App
-````
-
-2. Buat virtual environment (opsional tapi disarankan):
-
-```bash
-python -m venv venv
-source venv/bin/activate      # Linux / Mac
-venv\Scripts\activate         # Windows
 ```
 
-3. Install dependencies:
+-----
 
-```bash
-pip install -r requirements.txt
-```
+## ⚙️ Local Installation
 
-4. Jalankan aplikasi:
+1.  Clone the repo:
 
-```bash
-python app.py
-```
+    ```bash
+    git clone https://github.com/NasiGoRank/Damn-Vulnerable-LMS-App.git
+    cd DVLMS
+    ```
 
-5. Akses web di:
+2.  Create a virtual environment (optional but recommended):
 
-```
-http://localhost:5000
-```
+    ```bash
+    python -m venv venv
+    source venv/bin/activate      # Linux / Mac
+    venv\Scripts\activate         # Windows
+    ```
 
----
+3.  Install dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  Run the application:
+
+    ```bash
+    python app.py
+    ```
+
+5.  Access the web at:
+
+    ```
+    http://localhost:5000
+    ```
+
+-----
 
 ## 🐳 Docker
 
-### Build image dan run container:
+### Build the image and run the container:
 
 ```bash
-docker build -t damnvulnerablelmsapp_web .
-docker run -d -p 5050:5000 damnvulnerablelmsapp_web
+docker build -t dvlms .
+docker run -d -p 5050:5000 dvlms
 ```
 
-Akses di:
+Access at:
 
 ```
 http://localhost:5050
 ```
 
----
+-----
 
 ## 🐳 Docker Compose
 
-Kalau pakai Docker Compose, cukup 1 perintah untuk build & run:
+If you use Docker Compose, it's just one command to build & run:
 
 ```bash
 docker-compose up -d
 ```
 
-Akses di:
+Access at:
 
 ```
 http://localhost:5050
 ```
 
-> Jika port 5050 di host sudah kepakai, ubah `docker-compose.yml`:
+> If port 5050 is already in use on the host, change `docker-compose.yml`:
 
 ```yaml
 ports:
   - "5051:5000"   # Host:Container
 ```
 
----
+-----
 
-## 👤 Akun Default
+## 👤 Default Accounts
 
-| Username  | Password   | Role    |
-| --------  | ---------- | ------- |
-| admin     | admin123   | admin   |
-| teacher1  | teach123   | teacher |
-| student1  | password1  | student |
-| student2  | password2  | student |
+| Username | Password   | Role    |
+| -------- | ---------- | ------- |
+| admin    | admin123   | admin   |
+| teacher1 | teach123   | teacher |
+| student1 | password1  | student |
+| student2 | password2  | student |
 
-> Tombol **Reset Database** di login akan mengembalikan akun ke default ini.
+> The **Reset Database** button on the login page will restore the accounts to these defaults.
 
----
+-----
 
-## ⚠️ Peringatan
+## ⚠️ Warning
 
-* Aplikasi ini **sengaja rentan**, jangan dipakai di lingkungan production.
-* Hanya untuk **latihan & edukasi keamanan web**.
-* Database SQLite bersifat **lokal**, gunakan volume di Docker untuk persistent data.
+  * This application is **intentionally vulnerable**; do not use it in a production environment.
+  * For **web security training & educational purposes** only.
+  * The SQLite database is **local**; use a volume in Docker for persistent data.
 
----
+-----
 
-## 🔧 Fitur
+## 🔧 Features
 
-* Login/Register user
-* Role-based access: student, teacher, admin
-* Dashboard sesuai role
-* Admin: create/delete user, reset database
-* E-learning course sederhana
-* Toggle theme (dark/light)
-
----
+  * User Login/Registration
+  * Role-based access: student, teacher, admin
+  * Dashboard according to role
+  * Admin: create/delete users, reset database
+  * Simple e-learning course
+  * Toggle theme (dark/light)
