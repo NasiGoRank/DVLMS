@@ -5,9 +5,6 @@ __pycache__/
 # Virtual environment
 venv/
 
-# Database file (biar repo tetap bersih, nanti bisa generate lagi dengan init_db.py)
-database.db
-
 # Environment variables (kalau ada)
 .env
 
