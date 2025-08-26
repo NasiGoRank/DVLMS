@@ -15,7 +15,7 @@
     <a href="/admin" class="list-group-item list-group-item-action">Admin Panel</a>
     {% endif %}
 
-    {% if role == 'teacher' or 'admin'%}
+    {% if role == 'teacher' or role == 'admin' %}
     <a href="/teacher_panel" class="list-group-item list-group-item-action">Teacher Panel</a>
     {% endif %}
 </div>

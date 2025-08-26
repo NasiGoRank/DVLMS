@@ -54,7 +54,7 @@ def reset_db():
     cur.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", 
                 ("admin", "admin123", "admin"))
     cur.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", 
-                ("teacher", "teach123", "teacher"))
+                ("teacher1", "teach123", "teacher"))
     cur.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", 
                 ("student1", "password1", "student"))
     cur.execute("INSERT INTO users (username, password, role) VALUES (?, ?, ?)", 
@@ -235,9 +235,6 @@ def create_user():
 def teacher_panel():
     if "user_id" not in session:
         return redirect("/login")
-
-    if session.get("role") not in ['teacher', 'admin']:
-        return "Access denied", 403
 
     db = get_db()
     students = db.execute("SELECT * FROM users WHERE role='student'").fetchall()
