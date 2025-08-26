@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+    container_name: flask-vuln-lab
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app                # mount folder project ke container
+      - ./database.db:/app/database.db  # database persistent
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development
+    restart: unless-stopped
