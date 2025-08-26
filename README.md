@@ -30,7 +30,7 @@ Vuln Lab/
 │   └── css/
 │       ├── static.css
 │       └── theme.css
-│── database.db  (tidak di-git)
+│── database.db
 
 ````
 
@@ -68,7 +68,7 @@ python app.py
 5. Akses web di:
 
 ```
-http://localhost:5050
+http://localhost:5000
 ```
 
 ---
