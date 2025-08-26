@@ -3,7 +3,7 @@ version: "3.3"
 services:
   web:
     build: .
-    container_name: flask-vuln-lab
+    container_name: Damn-Vulnerable-LMS-App
     ports:
       - "5000:5000"
     volumes:
