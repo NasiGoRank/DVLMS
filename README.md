@@ -40,7 +40,7 @@ Vuln Lab/
 1.  Clone the repo:
 
     ```bash
-    git clone https://github.com/NasiGoRank/Damn-Vulnerable-LMS-App.git
+    git clone https://github.com/NasiGoRank/DVLMS.git
     cd DVLMS
     ```
 
